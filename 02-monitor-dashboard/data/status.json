@@ -1,0 +1,18 @@
+{
+  "servers": [
+    {
+      "name": "Web Server",
+      "status": "online",
+      "cpu": 40,
+      "ram": 55,
+      "disk": 70
+    },
+    {
+      "name": "API Server",
+      "status": "offline",
+      "cpu": 0,
+      "ram": 0,
+      "disk": 0
+    }
+  ]
+}

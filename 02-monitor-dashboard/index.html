@@ -3,9 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Infra Monitor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <span>INFRA MONITOR</span>
+        </div>
+
+        <nav>
+
+            <a href="index.html" class="menu-item active">
+                <i class="fa-solid fa-gauge-high"></i>
+                Dashboard
+            </a>
+
+            <a href="servers.html" class="menu-item">
+                <i class="fa-solid fa-server"></i>
+                Servidores
+            </a>
+
+            <a href="alerts.html" class="menu-item">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                Alertas
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-file"></i>
+                Reportes
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-gear"></i>
+                Configuración
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <div class="main">
+
+        <header class="topbar">
+
+        </header>
+
+        <main class="principal-section">
+            <div class="dashboard">
+                <i class="fa-solid fa-chart-column"></i>
+                <h1>Dashboard</h1>
+            </div>
+            <p>Infrastructure Overview</p>
+            <div class="principal-section-sections">
+                <div class="checks">
+                    <i class="fa-solid fa-server"></i>
+                    <h2>Total Servers</h2>
+                </div>
+                <div class="checks">
+                    <i class="fa-regular fa-circle-check"></i>
+                    <h2>Online</h2>
+                </div>
+                <div class="checks">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                    <h2>Offline</h2>
+                </div>
+                <div class="checks">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <h2>Alerts</h2>
+                </div>
+            </div>
+            <div class="principal-section-sections">
+                <div class="checks">
+                    <h2>Average CPU</h2>
+                </div>
+                <div class="checks">
+                    <h2>Average RAM</h2>
+                </div>
+                <div class="checks">
+                    <h2>Average Disk</h2>
+                </div>
+            </div>
+            <div class="principal-section-sections">
+                <div class="checks">
+                    <h2>Servers</h2>
+                </div>
+                <div class="checks">
+                    <h2>Alerts</h2>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footerclass">
+            <p>Infra Monitor Dashboard V1.0.0</p>
+        </footer>
+
+    </div>
+
 </body>
 </html>
