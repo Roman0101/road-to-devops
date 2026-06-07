@@ -13,6 +13,20 @@
       "cpu": 0,
       "ram": 0,
       "disk": 0
+    },
+    {
+      "name": "Backup Server",
+      "status": "online",
+      "cpu": 20,
+      "ram": 30,
+      "disk": 50
+    },
+    {
+      "name": "Database Server",
+      "status": "online",
+      "cpu": 80,
+      "ram": 75,
+      "disk": 90
     }
   ]
 }

@@ -91,12 +91,16 @@ nav{
 
 .checks {
     display: flex;
+    flex-direction: column;
     gap: 1rem;
     align-items: center;
     background-color: #213245;
     padding: 20px;
     border-radius: 8px;
     box-sizing: border-box;
+    p {
+        font-size: 2rem;
+    }
 }
 
 .principal-section-sections:nth-of-type(1) .checks,
@@ -111,6 +115,21 @@ nav{
 
 .principal-section-sections:nth-of-type(4) .checks:nth-child(2) {
   flex: 1;
+}
+
+/* 
+   ==================================================
+   SECCIÓN: Estilos de la tabla del dashboard
+   ==================================================
+*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, tr, td {
+    border-bottom: 1px solid #a9a9a9;
+    text-align: left;
+    padding: 1rem;
 }
 
 /* 

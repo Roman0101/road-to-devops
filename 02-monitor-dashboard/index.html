@@ -25,22 +25,22 @@
 
             <a href="servers.html" class="menu-item">
                 <i class="fa-solid fa-server"></i>
-                Servidores
+                Servers
             </a>
 
             <a href="alerts.html" class="menu-item">
                 <i class="fa-solid fa-triangle-exclamation"></i>
-                Alertas
+                Alerts
             </a>
 
             <a href="#" class="menu-item">
                 <i class="fa-solid fa-file"></i>
-                Reportes
+                Reports
             </a>
 
             <a href="#" class="menu-item">
                 <i class="fa-solid fa-gear"></i>
-                Configuración
+                Settings
             </a>
 
         </nav>
@@ -63,34 +63,91 @@
                 <div class="checks">
                     <i class="fa-solid fa-server"></i>
                     <h2>Total Servers</h2>
+                    <p>4</p>
                 </div>
                 <div class="checks">
                     <i class="fa-regular fa-circle-check"></i>
                     <h2>Online</h2>
+                    <p>3</p>
                 </div>
                 <div class="checks">
                     <i class="fa-regular fa-circle-xmark"></i>
                     <h2>Offline</h2>
+                    <p>1</p>
                 </div>
                 <div class="checks">
                     <i class="fa-solid fa-triangle-exclamation"></i>
                     <h2>Alerts</h2>
+                    <p>5</p>
                 </div>
             </div>
             <div class="principal-section-sections">
                 <div class="checks">
                     <h2>Average CPU</h2>
+                    <p id="cpuValue">0%</p>
+                    <canvas id="cpuChart"></canvas>
                 </div>
                 <div class="checks">
                     <h2>Average RAM</h2>
+                    <p id="ramValue">0%</p>
+                    <canvas id="ramChart"></canvas>
                 </div>
                 <div class="checks">
                     <h2>Average Disk</h2>
+                    <p id="diskValue">0%</p>
+                    <canvas id="diskChart"></canvas>
                 </div>
             </div>
             <div class="principal-section-sections">
                 <div class="checks">
                     <h2>Servers</h2>
+                    <table>
+                        <tr>
+                            <th>Server</th>
+                            <th>State</th>
+                            <th>IP</th>
+                            <th>Uptime</th>
+                            <th>CPU</th>
+                            <th>RAM</th>
+                            <th>DISK</th>
+                        </tr>
+                        <tr>
+                            <th>Web Server</th>
+                            <th>Online</th>
+                            <th>192.168.10</th>
+                            <th>90%</th>
+                            <th>35%</th>
+                            <th>78%</th>
+                            <th>50%</th>
+                        </tr>
+                        <tr>
+                            <th>Database Server</th>
+                            <th>Online</th>
+                            <th>192.168.20</th>
+                            <th>99%</th>
+                            <th>42%</th>
+                            <th>45%</th>
+                            <th>75%</th>
+                        </tr>
+                        <tr>
+                            <th>API Server</th>
+                            <th>Offline</th>
+                            <th>192.168.30</th>
+                            <th>85%</th>
+                            <th>0%/th>
+                            <th>0%</th>
+                            <th>0%</th>
+                        </tr>
+                        <tr>
+                            <th>Backup Server</th>
+                            <th>Online</th>
+                            <th>192.168.40</th>
+                            <th>100%</th>
+                            <th>28%</th>
+                            <th>60%</th>
+                            <th>80%</th>
+                        </tr>
+                    </table>
                 </div>
                 <div class="checks">
                     <h2>Alerts</h2>
@@ -103,6 +160,10 @@
         </footer>
 
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="js/app.js"></script>
 
 </body>
 </html>
