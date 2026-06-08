@@ -1,5 +1,6 @@
 let cpuChart;
 let serverChart;
+let uptimeChart;
 
 async function loadDashboard() {
 
@@ -36,7 +37,6 @@ function updateCards(data){
 
     document.getElementById("diskPercentage").textContent =
         data.disk[data.disk.length - 1] + "%";
-
 }
 
 function createCpuChart(data){
@@ -203,3 +203,65 @@ function createServerChart(data){
 
 }
 
+function getColor(value) {
+    if (value <= 60) return 'green';
+    if (value <= 80) return 'yellow';
+    return 'red';
+}
+
+function createBar(value) {
+    return `
+        <div style="background:#374151; border-radius:20px; width:100%; height:6px;">
+            <div style="
+                width: ${value}%;
+                height: 100%;
+                border-radius: 4px;
+                background: ${getColor(value)};
+                transition: width 0.3s ease;
+            "></div>
+        </div>
+        <small>${value}%</small>
+    `;
+}
+
+function getStatusStyle(status) {
+    if (status === 'online') {
+        return `color: #45ff29; 
+                background-color: rgba(98, 255, 0, 0.1); 
+                padding: 0.5rem; 
+                border-radius: 10%;`;
+    } else {
+        return `color: rgb(237, 91, 91); 
+                background-color: rgba(255, 3, 3, 0.2); 
+                padding: 0.5rem; 
+                border-radius: 10%;`;
+    }
+}
+async function loadServerTable() {
+    try {
+        const response = await fetch('./data/servers.json');
+        const data = await response.json();
+
+        const tableBody = document.querySelector('#serversTable tbody');
+        tableBody.innerHTML = '';
+
+        data.servers.forEach(server => {
+            const row = document.createElement('tr');
+
+            row.innerHTML = `
+                <td>${server.name}</td>
+                <td><span style="${getStatusStyle(server.status)}">${server.status}</span></td>
+                <td>${createBar(server.cpu)}</td>
+                <td>${createBar(server.ram)}</td>
+                <td>${createBar(server.disk)}</td>
+            `;
+
+            tableBody.appendChild(row);
+        });
+
+    } catch(error) {
+        console.error("Error cargando servidores:", error);
+    }
+}
+
+loadServerTable();

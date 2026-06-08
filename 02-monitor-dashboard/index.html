@@ -116,7 +116,22 @@
             <div class="principal-section-sections">
                 <div class="checks">
                     <h2>Servers</h2>
-                    <table>
+
+                    <table id="serversTable">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th id="status">Status</th>
+                                <th>CPU</th>
+                                <th>RAM</th>
+                                <th>Disk</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Las filas se generan automáticamente -->
+                        </tbody>
+                    </table>
+                    <!--<table>
                         <tr>
                             <th>Server</th>
                             <th>State</th>
@@ -131,9 +146,26 @@
                             <th class="online"><span>Online</span></th>
                             <th>192.168.10</th>
                             <th>90%</th>
-                            <th>35%</th>
-                            <th>78%</th>
-                            <th>50%</th>
+                            <td>
+                                <span class="metric-value">35%</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill cpu"></div>
+                                </div>
+                            </td>
+
+                            <td>
+                                <span class="metric-value">78%</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill ram"></div>
+                                </div>
+                            </td>
+
+                            <td>
+                                <span class="metric-value">50%</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill disk"></div>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <th>Database Server</th>
@@ -149,7 +181,7 @@
                             <th class="offline"><span>Offline</span></th>
                             <th>192.168.30</th>
                             <th>85%</th>
-                            <th>0%/th>
+                            <th>0%</th>
                             <th>0%</th>
                             <th>0%</th>
                         </tr>
@@ -162,7 +194,7 @@
                             <th>60%</th>
                             <th>80%</th>
                         </tr>
-                    </table>
+                    </table>-->
                 </div>
                 <div class="checks">
                     <h2>Alerts</h2>
