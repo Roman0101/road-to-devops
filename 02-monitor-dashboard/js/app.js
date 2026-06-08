@@ -28,51 +28,58 @@ loadDashboard();
 
 function updateCards(data){
 
-    document.getElementById("cpuValue").textContent =
+    document.getElementById("cpuPercentage").textContent =
         data.cpu[data.cpu.length - 1] + "%";
 
-    document.getElementById("ramValue").textContent =
+    document.getElementById("ramPercentage").textContent =
         data.ram[data.ram.length - 1] + "%";
 
-    document.getElementById("diskValue").textContent =
+    document.getElementById("diskPercentage").textContent =
         data.disk[data.disk.length - 1] + "%";
 
 }
 
 function createCpuChart(data){
 
-    const ctx = document.getElementById('cpuChart');
+    const ctx = document.getElementById('cpuGauge');
 
     cpuChart = new Chart(ctx, {
 
-        type: 'line',
+        type: 'doughnut',
 
         data: {
-
-            labels: [
-                '10:00',
-                '10:05',
-                '10:10',
-                '10:15',
-                '10:20',
-                '10:25'
-            ],
-
             datasets: [{
 
-                label: 'CPU %',
 
-                data: data.cpu,
+                data: [45,55],
+                
+                backgroundColor: [
+                    '#47cd05',
+                    '#1f2937'
+                ],
 
-                borderWidth: 2,
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false
-                }
+                borderWidth: 0
+                
 
             }]
 
-        }
+        },
+        options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    rotation:-90,
+
+                    circumference:180,
+
+                    cutout:'75%',
+
+                    plugins:{
+                        legend:{
+                            display:false
+                        }
+                    }
+                }
+
 
     });
 
@@ -80,38 +87,45 @@ function createCpuChart(data){
 
 function createRamChart(data){
 
-    const ctx = document.getElementById('ramChart');
+    const ctx = document.getElementById('ramGauge');
 
     ramChart = new Chart(ctx, {
 
-        type: 'line',
+        type: 'doughnut',
 
         data: {
-
-            labels: [
-                '10:00',
-                '10:05',
-                '10:10',
-                '10:15',
-                '10:20',
-                '10:25'
-            ],
-
             datasets: [{
 
-                label: 'RAM %',
 
-                data: data.ram,
+                data: [62,38],
+                
+                backgroundColor: [
+                    '#3b82f6',
+                    '#1f2937'
+                ],
 
-                borderWidth: 2,
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false
-                }
+                borderWidth: 0
+                
 
             }]
 
-        }
+        },
+        options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    rotation:-90,
+
+                    circumference:180,
+
+                    cutout:'75%',
+
+                    plugins:{
+                        legend:{
+                            display:false
+                        }
+                    }
+                }
+
 
     });
 
@@ -119,38 +133,44 @@ function createRamChart(data){
 
 function createDiskChart(data){
 
-    const ctx = document.getElementById('diskChart');
+    const ctx = document.getElementById('diskGauge');
 
     diskChart = new Chart(ctx, {
 
-        type: 'line',
+        type: 'doughnut',
 
         data: {
-
-            labels: [
-                '10:00',
-                '10:05',
-                '10:10',
-                '10:15',
-                '10:20',
-                '10:25'
-            ],
-
             datasets: [{
 
-                label: 'Disk %',
 
-                data: data.disk,
+                data: [78,22],
+                
+                backgroundColor: [
+                    '#f8e56b',
+                    '#1f2937'
+                ],
 
-                borderWidth: 2,
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false
-                }
+                borderWidth: 0
+                
 
             }]
 
-        }
+        },
+        options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    rotation:-90,
+
+                    circumference:180,
+
+                    cutout:'75%',
+
+                    plugins:{
+                        legend:{
+                            display:false
+                        }
+                    }
+                }
 
     });
 
@@ -182,3 +202,4 @@ function createServerChart(data){
     });
 
 }
+

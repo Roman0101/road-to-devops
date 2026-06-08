@@ -117,6 +117,79 @@ nav{
   flex: 1;
 }
 
+.gauge-center{
+
+    position:absolute;
+
+    left:32%;
+
+    top:77%;
+
+    transform:translate(-50%, -50%);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.gauge-center2{
+
+    position:absolute;
+
+    left:59%;
+
+    top:77%;
+
+    transform:translate(-50%, -50%);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.gauge-center3{
+
+    position:absolute;
+
+    left:86%;
+
+    top:77%;
+
+    transform:translate(-50%, -50%);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.gauge-center, .gauge-center2, .gauge-center3 span{
+
+    font-size:2.5rem;
+
+    font-weight:bold;
+
+    color:white;
+
+}
+
+.gauge-center, .gauge-center2, .gauge-center3 {
+    small {
+        color:#cbd5e1;
+
+        font-size:1rem;
+    }
+
+}
+
 /* 
    ==================================================
    SECCIÓN: Estilos de la tabla del dashboard
