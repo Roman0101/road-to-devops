@@ -174,6 +174,18 @@ th, tr, td {
     text-align: left;
     padding: 1rem;
 }
+th.online span{
+    color: #45ff29;
+    background-color: rgba(98, 255, 0, 0.1);
+    padding: 0.5rem;
+    border-radius: 10%;
+}
+th.offline span{
+    color: rgb(237, 91, 91);
+    background-color: rgba(255, 3, 3, 0.2);
+    padding: 0.5rem;
+    border-radius: 10%;
+}
 
 /* 
    ==================================================
