@@ -203,6 +203,21 @@ function createServerChart(data){
 
 }
 
+function setActiveMenu() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    
+    document.querySelectorAll('.menu-item').forEach(item => {
+        item.classList.remove('active');
+        const itemPage = item.getAttribute('href');
+        
+        if (itemPage === currentPage) {
+            item.classList.add('active');
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', setActiveMenu);
+
 function getColor(value) {
     if (value <= 60) return 'green';
     if (value <= 80) return 'yellow';
